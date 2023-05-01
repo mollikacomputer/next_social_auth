@@ -9,8 +9,9 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <Link href='/login' > LogIn Page </Link>
+      
      <h2 className="text-3xl">Next Social Auth with Facebook Home Page</h2>
+     <Link href='/login' > LogIn Page </Link>
      <button class="btn btn-secondary">Testing Daisy UI </button>
     </main>
   )
