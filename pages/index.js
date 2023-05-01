@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,6 +9,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
      <h2 className="text-3xl">Next Social Auth with Facebook Home Page</h2>
+     <button class="btn btn-secondary">Testing Daisy UI </button>
     </main>
   )
 }
