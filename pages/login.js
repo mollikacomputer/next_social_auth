@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 const login = () => {
+    const {data:session} = useSession();
   if (session) {
     return (
       <div>
