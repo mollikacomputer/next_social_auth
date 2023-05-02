@@ -1,20 +1,28 @@
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const login = () => {
-  return (
-      <div className="card w-96 mx-auto bg-base-100 shadow-xl">
-        <div className="card-body">
-          <Link href="/"> Back to Home page </Link>
-          <h2 className="card-title">Card title!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-center">
-            <button className="btn">Login With Google</button>
-            <button className="btn"> Login With Github </button>
-            <button className="btn">Login wigh Facebook </button>
-          </div>
-        </div>
+  if (session) {
+    return (
+      <div>
+        <p>
+          Welcome, {session.user.name}, {session.user.email}
+        </p>
+        <button className="btn" onClick={() => signOut()}>
+          Sign Out
+        </button>
       </div>
-  );
+    );
+  } else {
+    return (
+      <div>
+        <p> You are not Login </p>
+        <button className="btn" onClick={() => signIn("facebook")}>
+          LogIn with Facebook
+        </button>
+      </div>
+    );
+  }
 };
 
 export default login;
