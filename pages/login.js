@@ -21,6 +21,11 @@ const login = () => {
         <button className="btn" onClick={() => signIn("facebook")}>
           LogIn with Facebook
         </button>
+        
+        <button className="btn" onClick={() => signIn("google")}>
+          LogIn with Google
+        </button>
+
       </div>
     );
   }
